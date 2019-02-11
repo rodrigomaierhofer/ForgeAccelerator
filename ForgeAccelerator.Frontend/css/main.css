@@ -1,2 +1,8 @@
-﻿body {
+﻿html, body {
+    height: 100% !important
+}
+
+.force-h-100 {
+    min-height: 100% !important;
+    height: 100% !important
 }

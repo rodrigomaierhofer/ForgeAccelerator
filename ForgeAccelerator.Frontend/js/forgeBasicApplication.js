@@ -29,8 +29,10 @@ function startViewer() {
         console.log("entrou no vieweign initializer");
         console.log(documentId);
         viewerApp = new Autodesk.Viewing.ViewingApplication('MyViewerDiv');
+        //viewerApp.setAttribute('crossorigin', 'anonymous');
         viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
         viewerApp.loadDocument(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+        
     });
 }
 function onDocumentLoadSuccess(doc) {
@@ -46,6 +48,8 @@ function onDocumentLoadSuccess(doc) {
 
     // Choose any of the avialble viewables
     viewerApp.selectItem(viewables[0].data, onItemLoadSuccess, onItemLoadFail);
+    setSettings();
+    
 }
 
 function onDocumentLoadFailure(viewerErrorCode) {

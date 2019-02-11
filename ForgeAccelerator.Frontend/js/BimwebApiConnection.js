@@ -1,6 +1,6 @@
 ﻿frontEnd = "http://bimwebdev.s3-website-sa-east-1.amazonaws.com/#/login"
 baseUrl = "https://bimwebapi.projetabim.com.br";
-let projectId = 1;
+let projectId = 53;
 let loginData;
 
 //just a comment to test new github account
